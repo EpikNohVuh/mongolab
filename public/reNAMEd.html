@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>News Scraper</title>
+
+    <!--Bootstrap style sheet-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!--Google fonts style sheet-->
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet"> 
+
+    <style>
+      body {
+        background-color: white;
+        font-family: "Noticia Text", serif;
+      }
+
+      h2 {
+        font-family: "Noticia Text", serif;
+      }
+
+      .jumbotron {
+        background-color: #ebebe9;
+      }
+
+      #articles {
+        height: 700px;
+      }
+      #bodyinput {
+        margin: 15px;
+        font-family: "Kalam", cursive;
+        font-size: 22px;
+        background: #ffff88; /* Old browsers */
+        background: -moz-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* FF3.6+ */
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          color-stop(81%, #ffff88),
+          color-stop(82%, #ffff88),
+          color-stop(82%, #ffff88),
+          color-stop(100%, #ffffc6)
+        ); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* Opera 11.10+ */
+        background: -ms-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* IE10+ */
+        background: linear-gradient(
+          135deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      }
+      #titleinput {
+        font-family: "Kalam", cursive;
+        font-size: 22px;
+        background: #ffff88; /* Old browsers */
+        background: -moz-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* FF3.6+ */
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          color-stop(81%, #ffff88),
+          color-stop(82%, #ffff88),
+          color-stop(82%, #ffff88),
+          color-stop(100%, #ffffc6)
+        ); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* Opera 11.10+ */
+        background: -ms-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* IE10+ */
+        background: linear-gradient(
+          135deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      }
+      #notes {
+        font-family: "Reenie Beanie";
+        font-size: 22px;
+        background: #ffff88; /* Old browsers */
+        background: -moz-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* FF3.6+ */
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          color-stop(81%, #ffff88),
+          color-stop(82%, #ffff88),
+          color-stop(82%, #ffff88),
+          color-stop(100%, #ffffc6)
+        ); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* Opera 11.10+ */
+        background: -ms-linear-gradient(
+          -45deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* IE10+ */
+        background: linear-gradient(
+          135deg,
+          #ffff88 81%,
+          #ffff88 82%,
+          #ffff88 82%,
+          #ffffc6 100%
+        ); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        border-bottom-right-radius: 60px 5px;
+      }
+      input {
+        border:0px;
+      }
+      textarea {
+        border:0px;
+      }
+
+      title {
+        font-weight: bold;
+      }
+      
+      textarea,
+      input {
+        display: block;
+        width: 100%;
+        background-color: #fcf5c7;
+      }
+
+      input {
+        height: 36px;
+        font-size: 24px;
+      }
+
+      textarea {
+        height: 200px;
+        font-size: 18px;
+      }
+      .btn {
+        color: white;
+        text-decoration: none;
+        background-color: #007bff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron text-center col-md-12">
+        <div>
+          <h1>Scrape the News for your Peruse</h1>
+          <h2></h2>
+        </div>
+      </div>
+
+      <div class="btn">
+        <a href="/scrape">SCRAPE IT</a>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div id="articles"></div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div id="notes">
+            <h2>Click on an article to add a note</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Importing Bootstrap JavaScript-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

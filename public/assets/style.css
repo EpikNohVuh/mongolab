@@ -1,0 +1,145 @@
+body {
+  background-color: blue;
+    font-family: "Noticia Text", serif;
+}
+
+h2 {
+  font-family: "Noticia Text", serif;
+}
+
+.jumbotron {
+  background-color: #ebebe9;
+}
+
+#articles {
+  height: 700px;
+}
+#bodyinput {
+  margin: 15px;
+  font-family: "Kalam", cursive;
+  font-size: 22px;
+  background: #ffff88; /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    #ffff88 81%,
+    #ffff88 82%,
+    #ffff88 82%,
+    #ffffc6 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(81%, #ffff88),
+    color-stop(82%, #ffff88),
+    color-stop(82%, #ffff88),
+    color-stop(100%, #ffffc6)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    -45deg,
+    #ffff88 81%,
+    #ffff88 82%,
+    #ffff88 82%,
+    #ffffc6 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    -45deg,
+    #ffff88 81%,
+    #ffff88 82%,
+    #ffff88 82%,
+    #ffffc6 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    -45deg,
+    #ffff88 81%,
+    #ffff88 82%,
+    #ffff88 82%,
+    #ffffc6 100%
+  ); /* IE10+ */
+  background: linear-gradient(
+    135deg,
+    #ffff88 81%,
+    #ffff88 82%,
+    #ffff88 82%,
+    #ffffc6 100%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#titleinput {
+  font-family: "Kalam", cursive;
+  font-size: 22px;
+  background: #ffff88 50%; /* Old browsers */
+  }
+#notes {
+  font-family: "Reenie Beanie";
+  font-size: 22px;
+  background: #ffff88; /* Old browsers */
+  }
+input {
+  border:0px;
+}
+textarea {
+  border:0px;
+}
+
+h1 {
+padding: 10px;
+}
+
+title {
+  font-weight: bold;
+  padding: 10px;
+}
+
+input {
+  height: 36px;
+  font-size: 24px;
+}
+
+textarea {
+  height: 200px;
+  font-size: 18px;
+}
+.bold {
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin: auto;
+  overflow: hidden;
+}
+
+.topnav {
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.article-link {
+font-weight: bold;
+}
+
+.article-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  padding: 5px;
+  margin-bottom: 8px;
+}

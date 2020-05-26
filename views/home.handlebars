@@ -1,0 +1,22 @@
+<div class="container-fluid article-container">
+    <div class="row">
+        <div class="col-md-8 float-left">
+
+
+
+            {{#each article}}
+
+            <div class="article-card">
+                <p data-id={{this._id}} class="article-link" target="_blank" rel="noopener noreferrer"
+                    href="{{this.link}}">
+                    {{this.title}}</p>
+
+                <p><a href="{{this.link}}">{{this.link}}</a></p>
+            </div>
+            {{/each}}
+
+
+        </div>
+        <div class="col-md-4 float-left" id="notes"> </div>
+    </div>
+</div>
